@@ -21,7 +21,7 @@ class CharacterAdapter(var characterList: List<CharacterModel>, private var list
                 binding.tvNameCharacter.text = characterModel.name
                 binding.tvDescriptionCharacter.text = characterModel.description
                 Glide.with(this)
-                    .load(characterModel.thumbnail.img)
+                    .load("${characterModel.thumbnail.path}.${characterModel.thumbnail.extension}")
                     .into(binding.imgCharacter)
             }
     }
