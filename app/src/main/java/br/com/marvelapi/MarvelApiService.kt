@@ -15,8 +15,12 @@ interface MarvelApiService {
         @Query("limit") limit: String = Constants.limit
     ): Response<MarvelListResponse>
 
-    @GET("/v1/public/characters/{id}")
+    @GET("/v1/public/characters/{characterId}")
     suspend fun getCharacter(
-        @Path("id") id: Int
+        @Path("characterId") id: Int,
+        @Query("ts") apiKey: String = Constants.ts,
+        @Query("apikey") ts: String = Constants.PUBLIC_KEY,
+        @Query("hash") hash: String = Constants.hash(),
+        @Query("limit") limit: String = Constants.limit
     ): Response<MarvelListResponse>
 }
