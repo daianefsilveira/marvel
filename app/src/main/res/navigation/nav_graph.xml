@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/allCharactersFragment"
         android:name="br.com.marvelapi.AllCharactersFragment"
-        android:label="AllCharactersFragment"
+        android:label="Marvel Characters"
         tools:layout="@layout/fragment_all_characters">
         <action
             android:id="@+id/action_allCharactersFragment_to_characterDetailsFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/characterDetailsFragment"
         android:name="br.com.marvelapi.CharacterDetailsFragment"
-        android:label="CharacterDetailsFragment"
+        android:label="Character Details"
         tools:layout="@layout/fragment_details_character">
 
         <argument
