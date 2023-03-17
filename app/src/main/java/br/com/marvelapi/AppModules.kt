@@ -9,12 +9,18 @@ import retrofit2.converter.gson.GsonConverterFactory
 val appModules = module {
 
     viewModel {
+        MarvelListViewModel(
+            marvelRepository = get()
+        )
+    }
+
+    viewModel {
         MarvelViewModel(
             marvelRepository = get()
         )
     }
 
-    single {
+    factory<MarvelRepository> {
         MarvelRepositoryImpl(
             marvelApiService = get()
         )
