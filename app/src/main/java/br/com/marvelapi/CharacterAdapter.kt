@@ -1,17 +1,15 @@
 package br.com.marvelapi
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import br.com.marvelapi.databinding.ItemCharacterBinding
 import com.bumptech.glide.Glide
 
-class CharacterAdapter(var characterList: List<CharacterModel>, private var listener: OnItemClickListener) :
+class CharacterAdapter(var characterList: List<CharacterModel>) :
     RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>(){
-
-    interface OnItemClickListener {
-        fun show(position: Int)
-    }
 
     class CharacterViewHolder(private val binding: ItemCharacterBinding) :
         RecyclerView.ViewHolder(binding.root){
@@ -23,7 +21,20 @@ class CharacterAdapter(var characterList: List<CharacterModel>, private var list
                 Glide.with(this)
                     .load("${characterModel.thumbnail.path}.${characterModel.thumbnail.extension}")
                     .into(binding.imgCharacter)
+
+                binding.root.setOnClickListener {
+                    findNavController().navigate(
+                        R.id.characterDetailsFragment,
+                        sendBundle(characterModel.id)
+                    )
+                }
             }
+
+        private fun sendBundle(id: Int): Bundle {
+            val bundle = Bundle()
+            bundle.putInt("data", id)
+            return bundle
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CharacterViewHolder {
@@ -39,9 +50,6 @@ class CharacterAdapter(var characterList: List<CharacterModel>, private var list
     override fun onBindViewHolder(holder: CharacterViewHolder, position: Int) {
         holder.bind(characterList[position])
 
-        holder.itemView.setOnClickListener {
-            listener.show(position)
-        }
     }
 
     override fun getItemCount() = characterList.size
