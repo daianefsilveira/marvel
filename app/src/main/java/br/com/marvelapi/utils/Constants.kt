@@ -1,4 +1,4 @@
-package br.com.marvelapi
+package br.com.marvelapi.utils
 
 import java.math.BigInteger
 import java.security.MessageDigest

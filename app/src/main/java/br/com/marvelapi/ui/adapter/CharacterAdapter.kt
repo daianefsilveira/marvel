@@ -1,10 +1,12 @@
-package br.com.marvelapi
+package br.com.marvelapi.ui.adapter
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import br.com.marvelapi.CharacterModel
+import br.com.marvelapi.R
 import br.com.marvelapi.databinding.ItemCharacterBinding
 import com.bumptech.glide.Glide
 

@@ -1,9 +1,12 @@
-package br.com.marvelapi
+package br.com.marvelapi.ui.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import br.com.marvelapi.MarvelListResponse
+import br.com.marvelapi.data.repositories.MarvelRepository
+import br.com.marvelapi.utils.NetworkResult
 import kotlinx.coroutines.launch
 import retrofit2.Response
 

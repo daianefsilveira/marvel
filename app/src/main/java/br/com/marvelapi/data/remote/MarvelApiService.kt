@@ -1,5 +1,7 @@
-package br.com.marvelapi
+package br.com.marvelapi.data.remote
 
+import br.com.marvelapi.utils.Constants
+import br.com.marvelapi.MarvelListResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path

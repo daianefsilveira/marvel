@@ -1,9 +1,10 @@
-package br.com.marvelapi
+package br.com.marvelapi.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
+import br.com.marvelapi.R
 import br.com.marvelapi.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

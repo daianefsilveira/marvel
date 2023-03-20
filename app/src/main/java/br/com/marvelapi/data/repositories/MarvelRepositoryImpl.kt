@@ -1,5 +1,7 @@
-package br.com.marvelapi
+package br.com.marvelapi.data.repositories
 
+import br.com.marvelapi.MarvelListResponse
+import br.com.marvelapi.data.remote.MarvelApiService
 import retrofit2.Response
 
 class MarvelRepositoryImpl(

@@ -1,4 +1,4 @@
-package br.com.marvelapi
+package br.com.marvelapi.utils
 
 sealed class NetworkResult<T>(
     val data: T? = null,

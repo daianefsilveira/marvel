@@ -1,4 +1,4 @@
-package br.com.marvelapi
+package br.com.marvelapi.ui.view
 
 import android.content.ContentValues
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import br.com.marvelapi.ui.viewmodel.MarvelViewModel
+import br.com.marvelapi.utils.NetworkResult
 import br.com.marvelapi.databinding.FragmentDetailsCharacterBinding
 import com.bumptech.glide.Glide
 import org.koin.androidx.viewmodel.ext.android.viewModel

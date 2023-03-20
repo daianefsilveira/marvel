@@ -1,4 +1,4 @@
-package br.com.marvelapi
+package br.com.marvelapi.ui.view
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
@@ -8,7 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import br.com.marvelapi.CharacterModel
+import br.com.marvelapi.ui.viewmodel.MarvelListViewModel
+import br.com.marvelapi.utils.NetworkResult
 import br.com.marvelapi.databinding.FragmentAllCharactersBinding
+import br.com.marvelapi.ui.adapter.CharacterAdapter
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AllCharactersFragment : Fragment() {
