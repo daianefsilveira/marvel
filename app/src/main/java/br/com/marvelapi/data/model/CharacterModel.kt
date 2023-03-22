@@ -19,7 +19,7 @@ data class CharacterModel(
 
 data class Thumbnail(
     val path: String,
-    val extension: String,
+    val extension: String
 )
 
 
